@@ -32,10 +32,13 @@
                 </div>
 
                 <!-- We've used v-on to add an event handler - in this when the button is clicked,
-                     and we call the method 'addToClick' -->
-                <button class="button" v-on:click="addToCart">Add to Cart</button>
-                <button class="button" v-on:click="removeFromCart">Remove From Cart</button>
-
+                     and we call the method 'addToClick'
+                      Note the v-on: syntax and the shorter but equivalent '@' syntax
+                -->
+                <div>
+                    <button class="button" v-on:click="addToCart">Add to Cart</button>
+                    <button class="button" @click="removeFromCart">Remove</button>
+                </div>
             </div>
         </div>
     </div>
