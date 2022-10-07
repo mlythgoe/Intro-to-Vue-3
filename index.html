@@ -23,9 +23,11 @@
             <p v-else>Out of Stock</p>
 
             <ul>
+              <!-- detail is the 'alias' for the element in the collection -->
               <li v-for="detail in details">{{ detail }}</li>
             </ul>
 
+            <!-- Assigning a key to an element is important when we want to remove, reference a specific element -->
             <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
 
             <ul>
