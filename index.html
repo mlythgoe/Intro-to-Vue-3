@@ -33,6 +33,7 @@
               :key="variant.id" 
               @mouseover="updateVariant(index)"
               :style="{ backgroundColor: variant.color }"></div>
+
             <button class="button"
                     :class="{ disabledButton: !inStock }"
                     :disabled="!inStock"
