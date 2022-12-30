@@ -31,10 +31,11 @@
             <h2>Variants</h2>
             <!-- Assigning a key to an element is important when we want to remove, reference a specific element -->
             <!-- Here we use the id of the variant to define the key -->
+            <!-- 'variant; is the alias, variants is the collection -->
             <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
 
             <h2>Sizes</h2>
-            <!-- Here we use the index of the collection to define the key
+            <!-- Here we use the index of the collection to define the key -->
             <ul>
               <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
             </ul>
