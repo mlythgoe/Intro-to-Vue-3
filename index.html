@@ -23,12 +23,11 @@
 <!--                <p v-if="inStock">In Stock</p>-->
 <!--                <p v-else>Out Of Stock</p>-->
 
-<!--                <!- Show - if condition is true changes the visibility &ndash;&gt;-->
+                <!- Show - if condition is true changes the visibility -->
 <!--                <p v-show="inStock">In Stock</p>-->
 
                 <p v-if="inventory > 10">In Stock</p>
                 <p v-else-if="inventory >0 & inventory < 10">Low Stock</p>
-<!--                <p v-else-if="inventory == 0">Out of Stock</p>-->
                 <p v-else>Out of Stock</p>
 
                 <p v-show="onSale">On Sale</p>
