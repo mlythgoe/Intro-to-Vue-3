@@ -13,7 +13,7 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart }})</div>
-      
+
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
@@ -34,19 +34,23 @@
                  based on the color value from the variant object -->
             <!-- the mouseover event handler changes the image according to the variant's specific image -->
             <div
-              v-for="variant in variants" 
-              :key="variant.id" 
+              v-for="variant in variants"
+              :key="variant.id"
               @mouseover="updateImage(variant.image)"
               class="color-circle"
               :style="{ backgroundColor: variant.color}">
-
+              <!-- Setting the style above in the { } brackets is pure JavaScript, that's why we use camel case
+                   If we had used kebak case (i.e. background-color), JavaScript would have interpreted
+                   it as 'background minus color', which would have been invalid, unless we put the style
+                    in single quotes, i.e. {'background-color': variant.color } -->
             </div>
 
-            <!-- the disabledButton class is enabled when inStock is false -->
+            <!-- the disabledButton class is enabled when inStock is false, also the visual styling uses whether a style
+                 is in stock to define the class rendering -->
             <button
                     class="button"
-                    :disabled="!inStock"
                     :class="{disabledButton: !inStock}"
+                    :disabled="!inStock"
                     @click="addToCart">
               Add to Cart
             </button>
